@@ -23,7 +23,7 @@ phases:
       - echo "Pushing the Docker image to ECR Repository"
       - docker push 010928179293.dkr.ecr.us-east-1.amazonaws.com/test:${TAG}
       - echo "Docker Push to ECR Repository Completed -  $REPOSITORY_URI:$TAG"
-      - sed -i "s|image:.*|image: 010928179293.dkr.ecr.us-east-1.amazonaws.com/test:$TAG|" node_deploy.yaml
+      - sed -i "s|\${IMAGE_URL}|${TAG}|g" node_deploy.yaml
       - cat node_deploy.yaml
 artifacts:
   files:

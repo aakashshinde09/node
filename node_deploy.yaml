@@ -13,7 +13,7 @@ spec:
         app: nodejs
     spec:
       containers:
-      - image: Image
+      - image: 010928179293.dkr.ecr.us-east-1.amazonaws.com/test:${IMAGE_URL}
         name: nodejs
         ports:
         - containerPort: 3000
