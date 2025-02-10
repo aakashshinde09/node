@@ -8,7 +8,7 @@ phases:
         - aws --version
         # Login to ECR Registry 
         - echo "Login in to Amazon ECR Registry"
-        - aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 010928179293.dkr.ecr.us-east-1.amazonaws.com
+        - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 010928179293.dkr.ecr.us-east-1.amazonaws.com
   build:
     commands:
       # Building Docker Image
